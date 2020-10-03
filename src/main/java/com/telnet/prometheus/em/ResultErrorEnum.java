@@ -1,5 +1,7 @@
 package com.telnet.prometheus.em;
 
+import com.telnet.prometheus.util.SpringBeanUtils;
+
 /**
  * 返回结果错误码枚举类
  * @author Ternura
@@ -9,22 +11,22 @@ public enum ResultErrorEnum {
     /**
      * 默认未知异常
      */
-    UNKNOWN_ERROR(501, "未知异常，请稍后重试");
+    UNKNOWN_ERROR(501, "unknown-exception-message");
 
     private int status;
 
-    private String msg;
+    private String messageKey;
 
-    ResultErrorEnum(int status, String msg) {
+    ResultErrorEnum(int status, String messageKey) {
         this.status = status;
-        this.msg = msg;
+        this.messageKey = messageKey;
     }
 
     public int getStatus() {
         return status;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return SpringBeanUtils.getMessageByDefaultLocale(messageKey);
     }
 }

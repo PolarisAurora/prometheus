@@ -4,11 +4,11 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * mybatis配置类
+ * 通用配置信息
  * @author Ternura
  * @since 2020/10/3 10:21
  */
 @Configuration
-public class MybatisConfiguration {
+public class CommonConfiguration {
 
 }

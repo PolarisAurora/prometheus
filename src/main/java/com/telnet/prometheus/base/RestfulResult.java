@@ -2,6 +2,7 @@ package com.telnet.prometheus.base;
 
 import com.telnet.prometheus.constant.HttpConstant;
 import com.telnet.prometheus.em.ResultErrorEnum;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -10,6 +11,7 @@ import java.io.Serializable;
  * @author Ternura
  * @since 2020/10/3 19:50
  */
+@Data
 public class RestfulResult<T> implements Serializable {
     /**
      * 错误码
@@ -52,7 +54,7 @@ public class RestfulResult<T> implements Serializable {
             errorEnum = ResultErrorEnum.UNKNOWN_ERROR;
         }
         result.status = errorEnum.getStatus();
-        result.msg = errorEnum.getMsg();
+        result.msg = errorEnum.getMessage();
 
         return result;
     }
