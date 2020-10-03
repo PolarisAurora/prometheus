@@ -1,0 +1,19 @@
+server:
+  port: 8090
+mybatis:
+  mapperLocations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.telnet.prometheus.entity
+mybatis-plus:
+  typeEnumsPackage: com.baomidou.springboot.entity.enums
+  global-config:
+    db-config:
+      logic-delete-field: status
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://101.37.174.165:3306/hermes
+    username: root
+    password: Hermes2020@
+    driver-class-name: com.mysql.cj.jdbc.Driver
