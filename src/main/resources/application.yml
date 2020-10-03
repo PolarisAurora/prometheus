@@ -11,6 +11,8 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
 spring:
+  messages:
+    basename: i18n.message
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://101.37.174.165:3306/hermes

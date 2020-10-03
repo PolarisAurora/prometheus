@@ -1,5 +1,7 @@
 package com.telnet.prometheus.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.telnet.prometheus.entity.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -8,5 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2020/10/3 18:37
  */
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<UserDO> {
+
 }
